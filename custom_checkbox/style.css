@@ -1,0 +1,40 @@
+.custom input {
+  display: none;
+}
+.custom {
+  display: inline-block;
+  display: flex;
+  gap: 5px;
+}
+.empty_div {
+  border: 1px solid black;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 50%;
+}
+.custom input:checked + .empty_div {
+  background-color: black;
+}
+
+.custom input:checked + .empty_div::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: #fff;
+  display: block;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 9px;
+}
+.custom input:checked + .empty_div::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: #fff;
+  display: block;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 9px;
+}
